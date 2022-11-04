@@ -1,0 +1,276 @@
+* {
+    --font-color: white;
+    --title-bg: #007439;
+    --default-bg: #524646;
+    --btn-bg: #228653;
+}
+
+h1 {
+    margin: 0;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    font-family: 'Roboto', sans-serif;
+
+    background-color: rgb(41, 38, 38);
+}
+
+.container {
+    background: rgb(44, 41, 41);
+    border-radius: 10px;
+    display: flex;
+    margin: 40px 40px;
+}
+
+
+/* left-side */
+.left-side {
+    border-right: 2px solid rgb(173, 153, 153);
+    padding: 0 15px;
+}
+
+.left-side__top {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+    align-items: center;
+
+    
+    border-bottom: 1px solid #afaaaa;
+    padding-bottom: 8px;
+}
+
+.top-title {
+    grid-column-start: 1;
+    grid-column-end: 4;
+
+    font-size: 70px;
+    color: var(--font-color);
+}
+
+.top-choice-btn {
+    font-size: 50px;
+    color: var(--font-color);
+    text-decoration: none;
+
+    background: var(--default-bg);
+    border-radius: 5px;
+    
+    position: relative;
+}
+
+.top-choice-btn:hover {
+    color: black;
+}
+
+
+.left-side__bots {
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+    gap: 5px;
+}
+
+.bot {
+    margin-top: 10px;
+    background: var(--default-bg);
+    border-radius: 30px;
+
+    font-size: 35px;
+    color: var(--font-color);
+    text-align: center;
+}
+
+.left-side__btns {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 5px;
+
+    text-align: center;
+
+    margin-top: 50px;
+}
+
+.btn-wrapper {
+    background: var(--btn-bg);
+    border-radius: 10px;
+}
+
+.left-side-btn {
+    font-size: 30px;
+    color: var(--font-color);
+    text-decoration: none;
+
+    position: relative;
+}
+
+.left-side-btn:hover {
+    color: black;
+}
+
+
+
+
+/* правая сторона */
+.right-side {
+    margin: 0 100px;
+    display: grid;
+    grid-template-rows: 1fr, 1fr;
+}
+
+.all-time,
+.half {
+    display: grid;
+    grid-template-rows: repeat(4, 1fr);
+    align-items: center;
+}
+
+.right-side__title {
+    font-size: 45px;
+    color: var(--font-color);
+    margin: 0 auto;
+    border-bottom: 1px solid #afaaaa;
+}
+
+.right-side__result {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+    align-items: center;
+
+}
+
+.result-wrapper {
+    background-color: var(--default-bg);
+    border-radius: 40px;
+    text-align: center;
+}
+
+.all-time-result,
+.half-result{
+    font-size: 35px ;
+    color: var(--font-color);
+    text-decoration: none;
+}
+
+.all-time-result:hover,
+.half-result:hover {
+    color: black;
+}
+
+.right-side__bet {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-items: center;
+    align-items: center;
+    
+    background-color: #474545;
+    border-radius: 10px;
+}
+
+.bet-title {
+    font-size: 30px;
+    border-radius: 10px;
+}
+
+.bet-wrapper {
+    background-color: #4e4e4e;
+    border-radius: 10px;
+}
+
+.all-time-bet-over,
+.half-bet-over,
+.all-time-bet-under,
+.half-bet-under {
+    font-size: 25px;
+    text-decoration: none;
+    color: var(--font-color);
+
+    position: relative;
+}
+
+.all-time-bet-over:hover,
+.half-bet-over:hover,
+.all-time-bet-under:hover,
+.half-bet-under:hover{
+    color: black;
+}
+
+.bet:hover {
+    color: black;
+}
+
+.bet:nth-child(-n+3)::after {
+    content: "";
+    background-color: black;
+    height: 100%;
+    width: 1px;
+    position: absolute;
+
+    right: -4px;
+}
+
+@media all and (max-width: 800px) {
+    .right-side {
+        margin: 0 40px;
+    }
+}
+
+@media all and (max-width: 680px) {
+    .container {
+        display: block;
+    }
+
+    .right-side {
+        margin-top: 30px;
+    }
+
+    .left-side {
+        border-right: none;
+    }
+}
+
+@media all and (max-width: 480px) {
+    .right-side {
+        margin: 20px 20px;
+    }
+
+    .top-title {
+        font-size: 50px;
+    }
+    .top-choice-btn {
+        font-size: 30px;
+    }
+    .bot {
+        font-size: 25px;
+    }
+    .left-side-btn {
+        font-size: 18px;
+    }
+    .right-side__title {
+        font-size: 50px;
+    }
+    .all-time-result {
+        font-size: 30px;
+    }
+    .bet-title {
+        font-size: 25px;
+    }
+    .all-time-bet-over,
+    .half-bet-over,
+    .all-time-bet-under,
+    .half-bet-under {
+        font-size: 20px;
+    }
+}
+
+@media all and (max-width: 340px) {
+    .right-side {
+        margin: 10px 5px;
+    }
+}
